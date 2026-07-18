@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nike Women's Pegasus Trail 5 Gore-Tex</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="side_style.css">
+</head>
+<body>
+  <div class="product-page">
+    <div class="product-gallery">
+      <div class="main-image">
+        <img id="mainDisplay" src="Nike Pegasus Trail 5 GORE-TEX(1).png" alt="Main Product">
+      </div>
+      <div class="thumbnail-row">
+        <img class="thumbnail selected" src="Nike Pegasus Trail 5 GORE-TEX(1).png" alt="Image 1">
+        <img class="thumbnail" src="Nike Pegasus Trail 5 GORE-TEX(2).jpeg" alt="Image 2">
+        <img class="thumbnail" src="Nike Pegasus Trail 5 GORE-TEX(3).png" alt="Image 3">
+        <img class="thumbnail" src="Nike Pegasus Trail 5 GORE-TEX(4).jpeg" alt="Image 4">
+      </div>
+    </div>
+
+    <div class="product-info">
+      <p class="badge">Sustainable Materials</p>
+      <h1>Nike Women's Pegasus Trail 5 Gore-Tex</h1>
+      <p class="sub">Women's Waterproof Trail-Running Shoes</p>
+      <h2 class="price">₹ 14,813.00</h2>
+      <p class="tax-info">Inclusive of all taxes (Also includes all applicable duties)</p>
+
+      <div class="sizes">
+        <p>Select Size:</p>
+        <div class="size-options">
+          <button>UK 4</button>
+          <button>UK 5</button>
+          <button>UK 6</button>
+          <button>UK 7</button>
+          <button>UK 8</button>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a href="#" id="cartBtn" class="btn black">Add to Cart</a>
+        <a href="#" id="favBtn" class="btn outline">♥ Favourite</a>
+        <a href="bn.html" class="btn black">Buy Now</a>
+      </div>
+
+      <div class="highlight">
+        <p>This product is made with at least 20% recycled content by weight.</p>
+      </div>
+
+      <div class="description">
+        <p>The winterized Pegasus Trail 5 provides wet-weather protection for trail running. A waterproof GORE-TEX upper, an all-terrain outsole and reflective design details help you comfortably take on the elements. With a ReactX foam midsole, it gives you responsive cushioning for an energised ride.</p>
+        <p><strong>Colour Shown:</strong> Armoury Navy/Vintage Green/Platinum Violet/Armoury Navy<br>
+        <strong>Style:</strong> FQ0912-400<br>
+        <strong>Origin:</strong> Vietnam</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Thumbnail image switching
+    const mainImage = document.getElementById("mainDisplay");
+    const thumbnails = document.querySelectorAll(".thumbnail");
+
+    thumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener("click", function () {
+        mainImage.src = this.src;
+        thumbnails.forEach(t => t.classList.remove("selected"));
+        this.classList.add("selected");
+      });
+    });
+
+    // Favourite button
+    const favBtn = document.getElementById("favBtn");
+
+    favBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const product = {
+        name: "Nike Women's Pegasus Trail 5 Gore-Tex",
+        sub: "Women's Waterproof Trail-Running Shoes",
+        price: "₹ 14,813.00",
+        image: "Nike Pegasus Trail 5 GORE-TEX(1).png",
+      };
+
+      let favItems = JSON.parse(localStorage.getItem("favourites")) || [];
+      const isAlreadyFav = favItems.some(item => item.name === product.name);
+
+      if (!isAlreadyFav) {
+        favItems.push(product);
+        localStorage.setItem("favourites", JSON.stringify(favItems));
+        alert("Added to favourites!");
+        window.location.href = "fav.html";
+      } else {
+        alert("Already in favourites.");
+      }
+    });
+
+    // Cart button
+    const cartBtn = document.getElementById("cartBtn");
+
+    cartBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const product = {
+        name: "Nike Women's Pegasus Trail 5 Gore-Tex",
+        sub: "Women's Waterproof Trail-Running Shoes",
+        price: "₹ 14,813.00",
+        image: "Nike Pegasus Trail 5 GORE-TEX(1).png",
+      };
+
+      let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+      const isAlreadyInCart = cartItems.some(item => item.name === product.name);
+
+      if (!isAlreadyInCart) {
+        cartItems.push(product);
+        localStorage.setItem("cart", JSON.stringify(cartItems));
+        alert("Added to cart!");
+        window.location.href = "add_to_cart.html";
+      } else {
+        alert("Already in cart.");
+      }
+    });
+  </script>
+</body>
+</html>

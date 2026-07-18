@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now - GETGO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bn.css">
+</head>
+<body>
+    <nav class="navbar">
+        <p class="logo">GETGO</p>
+        <a class="secure" href="#">Secure Checkout <i class="fa-solid fa-lock"></i></a>
+        <div class="cart"><i class="fa-solid fa-cart-shopping"></i> Cart</div>
+    </nav>
+
+    <main class="wrapper">
+        <section class="address card">
+            <div class="section-header">
+                <h2>Delivery to</h2>
+                <a href="#" class="link">Change</a>
+            </div>
+            <p class="content">Amrita Vishwa Vidyapeetham, Kuragallu, Mangalagiri, Amaravati, Andhra Pradesh 522503</p>
+            <a href="#" class="link">+ Add Delivery Instructions</a>
+        </section>
+
+        <section class="product card">
+            <div class="product-details">
+                <img src="nikewomenspegasustrail5gore-tex.jpg" alt="">
+                <div class="info">
+                    <h3>Nike Women's Pegasus Trail 5 Gore-Tex</h3>
+                    <p class="price">₹ 14,813.00</p>
+                    <p>Eligible for FREE Delivery</p>
+                    <p>Get it by <strong>Tuesday, 31 October</strong></p>
+                    <a href="#" class="link">Change</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="payment-method card">
+            <h2>Payment Method</h2>
+            <input type="text" placeholder="Enter promo code">
+            <button class="btn apply">Apply</button>
+
+            <h3>Choose a payment option:</h3><br>
+            <label><input type="radio" name="payment"> Credit or Debit Card</label><br>
+            <label><input type="radio" name="payment"> Net Banking</label><br>
+            <select>
+                <option>Select your bank</option>
+                <option>HDFC Bank</option>
+                <option>ICICI Bank</option>
+                <option>Axis Bank</option>
+            </select><br><br>
+
+            <label><input type="radio" name="payment"> UPI Apps</label><br>
+            <input type="text" placeholder="Enter UPI ID">
+            <button class="btn verify">Verify</button><br><br>
+
+            <label><input type="radio" name="payment"> EMI</label><br>
+            <label><input type="radio" name="payment"> Cash on Delivery</label><br><br>
+
+            <button class="btn primary">Use this payment method</button>
+        </section>
+
+        <section class="order-summary card">
+            <h2>Order Summary</h2>
+            <div class="summary-item"><span>Items:</span><span>₹ 14,813.00</span></div>
+            <div class="summary-item"><span>Shipping:</span><span>₹10</span></div>
+            <div class="summary-item"><span>Delivery:</span><span>₹40</span></div>
+            <div class="summary-item"><span>Promotion:</span><span>₹40</span></div>
+            <div class="summary-item"><span>GST:</span><span>₹19.75</span></div>
+            <div class="summary-item total"><strong>Order Total:</strong><strong>₹ 14,922.75</strong></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="card footer-content">
+            <p><strong>Need help?</strong> Visit our <a href="#" class="link">Help Center</a> or <a href="#" class="link">Contact Us</a>.</p>
+            <p>Once you place your order, you'll receive an email confirmation. Your order is not complete until payment is received and processed.</p>
+            <p>See our <a href="#" class="link">Return Policy</a>.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Apply promo code
+        document.querySelector('.apply').addEventListener('click', function () {
+            const promoInput = document.querySelector('input[placeholder="Enter promo code"]');
+            const promo = promoInput.value.trim().toLowerCase();
+            if (promo === 'getgo10') {
+                alert('Promo code applied! ₹10 off.');
+            } else if (promo) {
+                alert('Invalid promo code.');
+            } else {
+                alert('Please enter a promo code.');
+            }
+        });
+
+        // Verify UPI ID
+        document.querySelector('.verify').addEventListener('click', function () {
+            const upiInput = document.querySelector('input[placeholder="Enter UPI ID"]');
+            const upiID = upiInput.value.trim();
+            if (upiID && upiID.includes('@')) {
+                alert('UPI ID verified successfully!');
+            } else {
+                alert('Please enter a valid UPI ID.');
+            }
+        });
+
+        // Confirm selected payment method
+        document.querySelector('.primary').addEventListener('click', function () {
+            const paymentOptions = document.getElementsByName('payment');
+            let selected = null;
+            for (let option of paymentOptions) {
+                if (option.checked) {
+                    selected = option.parentElement.textContent.trim();
+                    break;
+                }
+            }
+
+            if (selected) {
+                alert(`Payment method selected: ${selected}`);
+            } else {
+                alert('Please select a payment method.');
+            }
+        });
+    </script>
+</body>
+</html>

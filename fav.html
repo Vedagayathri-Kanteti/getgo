@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Favourites</title>
+<link rel="stylesheet" href="cart.css">  
+</head>
+<body>
+
+   <div id="favList"></div>
+
+  <script>
+    const favList = document.getElementById("favList");
+    const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+
+    if (favourites.length === 0) {
+      favList.innerHTML = "<p>No favourite items yet.</p>";
+    } else {
+      favourites.forEach((item, index) => {
+        favList.innerHTML += `
+          <div class="product" id="product-${index}">
+            <img src="nikewomenspegasustrail5gore-tex.jpg" alt="${item.name}">
+            <div class="price">₹ 14,813.00<br>
+            Nike Women's Pegasus Trail 5 Gore-Tex<br><br></div>
+            <a href="bn.html" class="buy-button">Buy Now</a>
+            <a href="add_to_cart.html" class="buy-button">Add To Cart</a>
+            <button class="remove-button" onclick="removeFromFavourites(${index})">Remove from Favourites</button>
+          </div>
+        `;
+      });
+    }
+
+    function removeFromFavourites(index) {
+      favourites.splice(index, 1); // Remove the item from the array
+      localStorage.setItem("favourites", JSON.stringify(favourites)); // Update localStorage
+      document.getElementById(`product-${index}`).remove(); // Remove the item from the page
+    }
+  </script>
+
+</body>
+</html>

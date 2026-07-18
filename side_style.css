@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f8f9fa;
+  color: #222;
+  padding: 40px;
+}
+
+.product-page {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-gallery {
+  max-width: 480px;
+}
+
+.main-image {
+  width: 400px;
+  height: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.thumbnail-row img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  cursor: pointer;
+  object-fit: cover;
+  border: 2px solid transparent;
+  transition: border 0.3s;
+}
+
+.thumbnail-row img:hover {
+  border: 2px solid #000;
+}
+
+
+.product-info {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.badge {
+  color: #d9534f;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.sub {
+  font-size: 1em;
+  color: #666;
+}
+
+.price {
+  font-size: 1.6em;
+  color: #000;
+}
+
+.tax-info {
+  font-size: 0.85em;
+  color: #888;
+}
+
+.sizes p {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.size-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.size-options button {
+  padding: 10px 16px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.size-options button:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.btn.black {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn.black:hover {
+  background-color: #333;
+}
+
+.btn.outline {
+  border: 2px solid #000;
+  color: #000;
+  background: transparent;
+}
+
+.btn.outline:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.highlight {
+  background-color: #eee;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 0.9em;
+}
+
+.description {
+  font-size: 0.95em;
+  color: #444;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login page</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="loginBox">
+    <p class="logo">GETGO</p>
+    
+    <input class="input mail" type="text" placeholder="Email" />
+    <input class="input password" type="password" placeholder="Password" />
+    
+    <button class="login" onclick="validateLogin()">Login</button>
+    
+    <p><a class="forgot" href="#">Forgot Password?</a></p>
+    <p class="new">New to GETGO? <a class="create" href="#">Create an account</a></p>
+    
+    <p id="errorMsg" style="color:red;"></p>
+    
+    <script>
+      function validateLogin() {
+        const email = document.getElementsByClassName("mail")[0].value;
+        const pass = document.getElementsByClassName("password")[0].value;
+        const errorMsg = document.getElementById("errorMsg");
+
+        // Simple email validation (you can improve this)
+        if (!email.includes("@") || !email.includes(".")) {
+          errorMsg.textContent = "Please enter a valid email address.";
+          return;
+        }
+
+        if (pass.length < 8) {
+          errorMsg.textContent = "Password must be at least 8 characters long.";
+          return;
+        }
+
+        // If validation passes
+        errorMsg.style.color = "green";
+        errorMsg.textContent = "Login successful!";
+      }
+    </script>
+  </div>  
+</body>
+</html>

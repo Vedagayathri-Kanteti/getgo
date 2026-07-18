@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+#navbar{
+  background:black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  }
+  ul{
+  list-style:none;
+  background:none;
+  }
+  ul li {
+  display:inline-block;
+  position:relative;
+  }
+  ul li a{
+  display:block;
+  padding:10px 42px;
+  color:white;
+  text-decoration:none;
+  text-align:left;
+  font-size:20px;
+  }
+  ul li ul.dropdown li{
+  display:block;
+  }
+  ul li ul.dropdown {
+  padding:0px 0px 0px 0px;
+  background:black;
+  position:absolute;
+  z-index:999;
+  display:none;
+  }
+  ul li a:hover {
+  background:#000033;
+  }
+  ul li:hover ul.dropdown{
+  display:block;
+  }
+
+.product-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 30px;
+    background: #ffffff;
+  }
+  
+  .product-card {
+    width: 300px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.01);
+    transition: transform 0.3s;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product-card img,
+  .product-card video {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .product-card .btn {
+    display: inline-block;
+    background:#000033 ;
+    color: white;
+    font-size: 15px;
+    padding: 12px;
+    padding-bottom: 5px;
+    margin: 10px;
+    width:280px;
+    height:80px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .product-card .btn:hover {
+    background: #003300;
+  }
+  .product-section1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 10px;
+    background: #ffffff;
+  }
+  
+  .product-card1 {
+    width:110px;
+    height:90px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.01);
+    transition: transform 0.3s;
+  }
+  
+  .product-card1:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product-card1 img,
+  .product-card1 video {
+    width: 110px;
+    height: 90px;
+    object-fit: cover;
+  }
+  
+  
+

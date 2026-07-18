@@ -1,0 +1,94 @@
+<html>
+<head>
+<style>
+#navbar{
+  background:black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  }
+  ul{
+  list-style:none;
+  background:none;
+  }
+  ul li {
+  display:inline-block;
+  position:relative;
+  }
+  ul li a{
+  display:block;
+  padding:10px 42px;
+  color:white;
+  text-decoration:none;
+  text-align:left;
+  font-size:20px;
+  }
+  ul li ul.dropdown li{
+  display:block;
+  }
+  ul li ul.dropdown {
+  padding:0px 0px 0px 0px;
+  background:black;
+  position:absolute;
+  z-index:999;
+  display:none;
+  }
+  ul li a:hover {
+  background:#000033;
+  }
+  ul li:hover ul.dropdown{
+  display:block;
+  }
+  
+
+</style>
+</head> 
+<body>
+<nav id="navbar">
+    <ul>
+      <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
+      <li><a href="#">About</a></li>
+      <li>
+        <a href="#">Brand</a>
+        <ul class="dropdown">
+          <li><a href="Nike.html">Nike</a></li>
+          <li><a href="adidas.html">Adidas</a></li>
+          <li><a href="fila.html">Fila</a></li>
+          <li><a href="h&m.html">H&M</a></li>
+          <li><a href="puma.html">Puma</a></li>
+          <li><a href="airjordan.html">AirJordan</a></li>
+          <li><a href="asics.html">Asics</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Men</a>
+        <ul class="dropdown">
+          <li><a href="#">Shoes</a></li>
+          <li><a href="#">Clothing</a></li>
+          <li><a href="#">Offers</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Women</a>
+        <ul class="dropdown">
+          <li><a href="w_shoes.html">Shoes</a></li>
+          <li><a href="#">Clothing</a></li>
+          <li><a href="#">Offers</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Kids</a>
+        <ul class="dropdown">
+          <li><a href="#">Shoes</a></li>
+          <li><a href="#">Clothing</a></li>
+          <li><a href="#">Offers</a></li>
+        </ul>
+      </li>
+      <li><a href="#">New Arrivals</a></li>
+      <li><a href="fav.html"><i class="fa-solid fa-star" style="color:#cb994a;"></i></a></li>
+      <li><a href="add_to_cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+      <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+      <li><a href="login.html"><i class="fa-solid fa-user" style="color:grey;"></i></a></li>
+    </ul>
+  </nav>
+</body>
+</html>

@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: white;
+}
+
+#navbar{
+  background:black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  }
+  ul{
+  list-style:none;
+  background:none;
+  }
+  ul li {
+  display:inline-block;
+  position:relative;
+  }
+  ul li a{
+  display:block;
+  padding:10px 42px;
+  color:white;
+  text-decoration:none;
+  text-align:left;
+  font-size:20px;
+  }
+  ul li ul.dropdown li{
+  display:block;
+  }
+  ul li ul.dropdown {
+  padding:0px 0px 0px 0px;
+  background:black;
+  position:absolute;
+  z-index:999;
+  display:none;
+  }
+  ul li a:hover {
+  background:#000033;
+  }
+  ul li:hover ul.dropdown{
+  display:block;
+  }
+  
+.hero video {
+  width: 100%;
+  height: auto;
+  display: block;
+  
+}
+.new-arrivals {
+  text-align: center;
+  margin: 40px 0;
+  padding-top:20px;
+}
+.new-arrivals h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color:darkgoldenrod;
+}
+.new-arrivals h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+}
+.product-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 30px;
+  background: #ffffff;
+}
+
+.product-card {
+  width: 300px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.01);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img,
+.product-card video {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.product-card .btn {
+  display: inline-block;
+  background:#000033 ;
+  color: white;
+  font-size: 15px;
+  padding: 12px;
+  padding-bottom: 5px;
+  margin: 10px;
+  width:280px;
+  height:80px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.product-card .btn:hover {
+  background: #003300;
+}
+
+.sale-banner {
+  background: black;
+  padding-top:175px;
+  padding-left:5px;
+  padding-right:5px;
+  text-align: center;
+  font-size: 24px;
+  gap : 10px;
+  color: white;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  background: black;
+  color: white;
+  padding: 40px;
+  justify-content: space-around;
+}
+
+.footer-links .column {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap:30px;
+  padding-left:15px;
+}
+
+.footer-links .column a {
+  color:white;
+  font-size: 15px;
+  text-decoration: none;
+  gap: 20px;
+  transition: color 0.2s;
+}
+
+.footer-links .column a:hover {
+  font-size:18px;
+}
+
+.footer-contact {
+  background:black;
+  color:white;
+  text-align: left;
+  padding: 30px;
+  font-size: 17px;
+}

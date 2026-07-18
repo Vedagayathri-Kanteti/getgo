@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add to Cart</title>
+  <link rel="stylesheet" href="cart.css">
+
+</head>
+<body>
+
+  <div id="favList"></div>
+
+  <script>
+    const favList = document.getElementById("favList");
+
+    function renderCart() {
+      const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+      favList.innerHTML = "";
+
+      if (cartItems.length === 0) {
+        favList.innerHTML = "<p>No items are added to cart yet.</p>";
+        return;
+      }
+
+      cartItems.forEach((item, index) => {
+        favList.innerHTML += `
+          <div class="product">
+            <img src="${item.image}" alt="${item.name}">
+            <div class="price">${item.price}<br>
+            ${item.name}<br><br></div>            
+            <a href="bn.html" class="buy-button">Buy Now</a>
+            <button class="remove-button" onclick="removeFromCart(${index})">Remove</button>
+          </div>
+        `;
+      });
+    }
+
+    function removeFromCart(index) {
+      let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+      cartItems.splice(index, 1); // remove item by index
+      localStorage.setItem("cart", JSON.stringify(cartItems));
+      renderCart(); // re-render list
+    }
+
+    // Initial render
+    renderCart();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Get the Drip</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-image: url('startpage1.jpg');
+      background-size: cover;         /* Cover the entire area */
+      background-position: center;    /* Keep it centered */
+      background-repeat: no-repeat;   /* Prevent tiling */
+      background-attachment: fixed;   /* Optional: locks background during scroll */
+      position: relative;    
+}
+    .circle-btn {
+      position: absolute;
+      width: 170px;
+      left:51.5%;
+      top:38%;
+      height: 170px;
+      background-color: #e74c3c;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+      line-height: 120px;
+      transform: translateX(-50%);
+      border: none;
+      cursor: pointer;
+      animation: Circle 6s ease-in-out forwards;
+    }
+
+    @keyframes Circle {
+      0% {
+        border-radius: 0%;
+        background-color: #8B0000;
+      }
+
+      50% {
+        border-radius: 50%;
+        background-color:#191970;
+      }
+
+      100% {
+        border-radius: 50%;
+        background-color: #006400;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="circle-btn" onclick="window.location.href='index.html'">Get The Drip</button>
+
+</body>
+</html>
+
+
